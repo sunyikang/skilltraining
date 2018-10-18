@@ -1,0 +1,11 @@
+/Users/yikangsun/git/skilltraining/lele/02_rectangle/bin/Debug/netcoreapp2.0/02_rectangle.deps.json
+/Users/yikangsun/git/skilltraining/lele/02_rectangle/bin/Debug/netcoreapp2.0/02_rectangle.runtimeconfig.json
+/Users/yikangsun/git/skilltraining/lele/02_rectangle/bin/Debug/netcoreapp2.0/02_rectangle.runtimeconfig.dev.json
+/Users/yikangsun/git/skilltraining/lele/02_rectangle/bin/Debug/netcoreapp2.0/02_rectangle.dll
+/Users/yikangsun/git/skilltraining/lele/02_rectangle/bin/Debug/netcoreapp2.0/02_rectangle.pdb
+/Users/yikangsun/git/skilltraining/lele/02_rectangle/obj/Debug/netcoreapp2.0/02_rectangle.csproj.CoreCompileInputs.cache
+/Users/yikangsun/git/skilltraining/lele/02_rectangle/obj/Debug/netcoreapp2.0/02_rectangle.AssemblyInfoInputs.cache
+/Users/yikangsun/git/skilltraining/lele/02_rectangle/obj/Debug/netcoreapp2.0/02_rectangle.AssemblyInfo.cs
+/Users/yikangsun/git/skilltraining/lele/02_rectangle/obj/Debug/netcoreapp2.0/02_rectangle.dll
+/Users/yikangsun/git/skilltraining/lele/02_rectangle/obj/Debug/netcoreapp2.0/02_rectangle.pdb
+/Users/yikangsun/git/skilltraining/lele/02_rectangle/obj/Debug/netcoreapp2.0/02_rectangle.csprojResolveAssemblyReference.cache

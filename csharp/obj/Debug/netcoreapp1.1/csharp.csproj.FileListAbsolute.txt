@@ -1,0 +1,8 @@
+/Users/yikangsun/git/skilltraining/csharp/bin/Debug/netcoreapp1.1/csharp.deps.json
+/Users/yikangsun/git/skilltraining/csharp/bin/Debug/netcoreapp1.1/csharp.runtimeconfig.json
+/Users/yikangsun/git/skilltraining/csharp/bin/Debug/netcoreapp1.1/csharp.runtimeconfig.dev.json
+/Users/yikangsun/git/skilltraining/csharp/obj/Debug/netcoreapp1.1/csharp.AssemblyInfo.cs
+/Users/yikangsun/git/skilltraining/csharp/bin/Debug/netcoreapp1.1/csharp.dll
+/Users/yikangsun/git/skilltraining/csharp/bin/Debug/netcoreapp1.1/csharp.pdb
+/Users/yikangsun/git/skilltraining/csharp/obj/Debug/netcoreapp1.1/csharp.dll
+/Users/yikangsun/git/skilltraining/csharp/obj/Debug/netcoreapp1.1/csharp.pdb
