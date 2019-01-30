@@ -1,13 +1,21 @@
-service: aws-nodejs-test
+service: aws-nodejs-20190130
 
 provider:
   name: aws
   runtime: nodejs8.10
+  stage: dev
+  region: ap-southeast-1
 
 functions:
   hello:
     handler: handler.hello
     events:
       - http:
-          path: users/create
+          path: /hello
+          method: get
+  imageResize:
+    handler: handler.imageResize
+    events:
+      - http:
+          path: /imageResize
           method: get
