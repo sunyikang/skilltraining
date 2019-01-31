@@ -11,7 +11,7 @@ var requestTime = function (req, res, next) {
 
 app.use(requestTime)
 
-app.get('/hello', function (req, res) {
+app.get('/timestamp', function (req, res) {
   var responseText = 'Hello World!<br>'
   responseText += '<small>Requested at: ' + req.requestTime + '</small>'
   res.send(responseText)
