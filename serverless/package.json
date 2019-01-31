@@ -13,7 +13,7 @@
     "serverless-plugin-include-dependencies": "^3.2.1"
   },
   "scripts": {
-    "test": "serverlesstest"
+    "test": "mocha"
   },
   "author": "iamhero",
   "license": "ISC"
