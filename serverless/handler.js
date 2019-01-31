@@ -23,14 +23,3 @@ module.exports.imageResize = (event, context, callback) => {
 
   callback(null, response);
 };
-
-
-  // var request = require('request');
-  // var thisStatusCode = "";
-  // var thisBody;
-  // request('http://qa-manage.enachina.com/v1/appversion', function (error, response, body) {
-  //   thisBody = body;
-  //   thisStatusCode = response.statusCode;
-  //   console.log("sss");
-  // })
-

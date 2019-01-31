@@ -21,7 +21,16 @@ app.get('/', function (req, res) {
   var request = require('request');
   request('http://qa-manage.enachina.com/v1/appversion', function (error, response, body) {
     console.log(body)
+
+    var result;
+    if(response.statusCode == 200) {
+      result = "unit test pass"
+    } else {
+      result = "unit test failed"
+    }
+    
     res.send({
+      testResult: result,
       statusCode: response.statusCode,
       body: JSON.stringify({
         message: body
