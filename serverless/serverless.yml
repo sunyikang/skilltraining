@@ -1,5 +1,13 @@
 service: aws-nodejs-20190130
 
+package:
+  exclude:
+    - node_modules/** # no need to add this yourself, this plugin does it for you
+
+plugins:
+  - serverless-plugin-include-dependencies
+  - serverless-offline
+
 provider:
   name: aws
   runtime: nodejs8.10
@@ -19,3 +27,8 @@ functions:
       - http:
           path: /imageResize
           method: get
+  app:
+    handler: index.hello
+    events:
+      - http: ANY /
+      - http: 'ANY {proxy+}'

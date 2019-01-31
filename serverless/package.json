@@ -1,0 +1,19 @@
+{
+  "name": "serverless",
+  "version": "1.36.3",
+  "description": "serverless start from index.js",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.16.4",
+    "request": "^2.88.0",
+    "serverless-dependency-install": "^0.0.3",
+    "serverless-http": "^1.9.0",
+    "serverless-plugin-include-dependencies": "^3.2.1",
+    "serverless-offline": "^4.2.1"
+  },
+  "scripts": {
+    "test": "serverlesstest"
+  },
+  "author": "iamhero",
+  "license": "ISC"
+}
