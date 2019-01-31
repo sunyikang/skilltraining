@@ -1,20 +1,19 @@
 'use strict';
 
-module.exports.hello = async (event, context) => {
-  // TODO YK P1: invoke an API
-  var request = require('request');
-  var messages = "hello";
-  return {
+module.exports.hello = (event, context, callback) => {
+
+  var thisBody = "hello from handler.js file"
+  const response =  {
     statusCode: 200,
     body: JSON.stringify({
-      message: messages
+      message: thisBody
     }),
   };
 
   callback(null, response);
 };
 
-module.exports.imageResize = async (event, context) => {
+module.exports.imageResize = (event, context, callback) => {
   return {
     statusCode: 200,
     body: JSON.stringify({
@@ -24,4 +23,14 @@ module.exports.imageResize = async (event, context) => {
 
   callback(null, response);
 };
+
+
+  // var request = require('request');
+  // var thisStatusCode = "";
+  // var thisBody;
+  // request('http://qa-manage.enachina.com/v1/appversion', function (error, response, body) {
+  //   thisBody = body;
+  //   thisStatusCode = response.statusCode;
+  //   console.log("sss");
+  // })
 
