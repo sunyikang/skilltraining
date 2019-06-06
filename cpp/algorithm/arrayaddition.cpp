@@ -53,12 +53,13 @@ static string ArrayAddition(int arr[], int length)
     return "false";
 }
 
-//#define VALID_MAIN
+#define VALID_MAIN
 #ifdef VALID_MAIN
 int main()
 {
     int arr[] = {1,2,3, 100};
     cout << ArrayAddition(arr, sizeof(arr)/sizeof(*arr));
+    cout << "xxx";
     return 0;
 }
 #endif

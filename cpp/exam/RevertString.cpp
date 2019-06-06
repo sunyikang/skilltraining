@@ -153,7 +153,7 @@ int getMaxPopulation(vector<int> cities, int vac)
     return maxlist[left];
 }
 
-string RevertString(input)
+string RevertString(string input)
 {
     return input;
 }
@@ -162,6 +162,5 @@ int main(void)
 {
     string input = "I_Love_You";
     string result = RevertString(input);
-    cout << result
+    cout << result;
 }
-#endif
