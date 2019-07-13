@@ -44,6 +44,15 @@ Output: 1994
 Explanation: M = 1000, CM = 900, XC = 90 and IV = 4.
 '''
 
+'''
+I             1
+V             5
+X             10
+L             50
+C             100
+D             500
+M             1000
+'''
 class Solution:
     def __init__(self):
         self.combination={}
@@ -53,10 +62,28 @@ class Solution:
         self.combination['XC'] = 90
         self.combination['CD'] = 400
         self.combination['CM'] = 900
+        self.pure={}
+        self.pure['I'] = 1
+        self.pure['V'] = 5
+        self.pure['X'] = 10
+        self.pure['L'] = 50
+        self.pure['C'] = 100
+        self.pure['D'] = 500
+        self.pure['M'] = 1000
+        self.result = 0
         
-    def kickoutCombinations(self, str, num):
+    def kickoutCombinations(self, str):
+        for key, value in self.combination.items():
+            self.result += value * str.count(key)
+            str = str.replace(key, '')
+        print(str)
         return str
 
+    def calculatePureLetters(self, str):
+        for key, value in self.pure.items():
+            self.result += value * str.count(key)
+            str = str.replace(key, '')
+        
     def romanToInt(self, s):
         # IV IX XL XC CD CM ==> move these out from string and add their number into final number
         # calculate left character without considering combination
@@ -65,6 +92,9 @@ class Solution:
         # original_string
         # final_count
 
-        result = 0
-        left_str = self.kickoutCombinations(s, result)
-        return 1
+        left_str = self.kickoutCombinations(s)
+        self.calculatePureLetters(left_str)
+        return self.result
+
+x = Solution().romanToInt('XXXXVIX')
+print(x)
