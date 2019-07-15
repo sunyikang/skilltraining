@@ -17,7 +17,7 @@ Output: "10101"
 '''
 
 class Solution:
-    def add_binary_str(self, left, right, jump):
+    def addBinaryStr(self, left, right, jump):
         sum = int(left) + int(right) + int(jump)
         if sum == 0:
             return '0', '0'
@@ -43,17 +43,17 @@ class Solution:
             longstr = b[::-1]
             shortstr = a[::-1]
 
-        jump = 0
+        carry = 0
         max_len = len(longstr)
-        combine = ""
+        result = ""
         for i in range(0, max_len):
             longsub = longstr[i]
             shortsub = shortstr[i] if i < len(shortstr) else '0'
-            result, jump = self.add_binary_str(longsub, shortsub, jump)
-            combine += result
-        if jump == '1':
-            combine += jump
-        return combine[::-1]
+            answer, carry = self.addBinaryStr(longsub, shortsub, carry)
+            result += answer
+        if carry == '1':
+            result += carry
+        return result[::-1]
 
         
 def main():
