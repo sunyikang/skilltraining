@@ -1,7 +1,7 @@
 """
 Packing vs. Unpacking
 
-run python features/tupler.py
+run python features/tuple_pack.py
 
 https://www.geeksforgeeks.org/unpacking-a-tuple-in-python/
 """
