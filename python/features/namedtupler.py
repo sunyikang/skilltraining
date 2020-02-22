@@ -5,6 +5,8 @@ namedtuple instances are just as memory efficient as regular tuples because
 they do not have per-instance dictionaries. Each kind of namedtuple is represented 
 by its own class, created by using the namedtuple() factory function. 
 The arguments are the name of the new class and a string containing the names of the elements.
+
+https://pymotw.com/2/collections/namedtuple.html
 """
 
 import collections
@@ -19,7 +21,7 @@ jane = Person(name='Jane', age=29, gender='female')
 print('\nField by name:', jane.name)
 
 print('\nFields by index:')
-for p in [ bob, jane ]:
+for p in [bob, jane]:
     print('%s is a %d year old %s' % p)
 
 try:
