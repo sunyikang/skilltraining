@@ -10,7 +10,7 @@
     "files.watcherExclude": {
         "**/.git/objects/**": true,
         "**/.git/subtree-cache/**": true,
-        "**/node_modules/*/**": true,
+        "**/node_modules/*/**": true
     },
     "editor.rulers": [
         80,
