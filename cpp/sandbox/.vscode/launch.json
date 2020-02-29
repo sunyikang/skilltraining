@@ -1,29 +1,22 @@
-/* launch.json */
 {
-    "version": "2.0.0",
+    "version": "0.2.0",
     "configurations": [
-        {
-            "name": "C++ Launch",
-            "type": "cppdbg",
-            "request": "launch",
-            "program": "${workspaceRoot}/hello.out",
-            "preLaunchTask": "build",
-            "internalConsoleOptions": "openOnSessionStart",
-            "logging": {
-                "moduleLoad": false,
-                "programOutput": true,
-                "trace": true,
-                "traceResponse": true
-            },
-            "showDisplayString": false,
-            "args": [],
-            "stopAtEntry": true,
-            "cwd": "${workspaceRoot}",
-            "environment": [],
-            "externalConsole": true, // set true to enable keyboard input
-            "osx": {
-                "MIMode": "lldb"
-            }
+      {
+        "name": "(lldb) Launch",
+        "type": "cppdbg",
+        "request": "launch",
+        "program": "${workspaceFolder}/hello.out",
+        "args": [],
+        "stopAtEntry": true,
+        "cwd": "${workspaceFolder}",
+        "environment": [],
+        "externalConsole": true,
+        "MIMode": "lldb",
+        "logging": {
+          "trace": true,
+          "traceResponse": true,
+          "engineLogging": true
         }
+      }
     ]
 }
