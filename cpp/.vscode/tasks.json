@@ -1,38 +1,22 @@
-/* tasks.json */
 {
     "version": "2.0.0",
     "tasks": [
-        {
-            "label": "build",
-            "command": "clang++",
-            "args": [
-                "-o",
-                "${workspaceRoot}/algorithm/arrayaddition.out", // executable
-                "${workspaceRoot}/algorithm/arrayaddition.cpp", // main file
-                "-g",
-                "-v"
-            ],
-            "type": "shell",
-            "presentation": {
-                "echo": true,
-                "reveal": "always",
-                "panel": "shared"
-            },
-            "problemMatcher": {
-                "owner": "cpp",
-                "fileLocation": [
-                    "relative",
-                    "${workspaceRoot}"
-                ],
-                "pattern": {
-                    "regexp": "^(.*):(\\d+):(\\d+):\\s+(warning|error):\\s+(.*)$",
-                    "file": 1,
-                    "line": 2,
-                    "column": 3,
-                    "severity": 4,
-                    "message": 5
-                }
-            }
+      {
+        "label": "Build with Clang",
+        "type": "shell",
+        "command": "clang++",
+        "args": [
+          "-std=c++17",
+          "-stdlib=libc++",
+          "sandbox/hello.cpp",
+          "-o",
+          "sandbox/hello.out",
+          "--debug"
+        ],
+        "group": {
+          "kind": "build",
+          "isDefault": true
         }
+      }
     ]
 }
