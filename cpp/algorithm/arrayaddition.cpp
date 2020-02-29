@@ -59,7 +59,7 @@ int main()
 {
     int arr[] = {1,2,3, 100};
     cout << ArrayAddition(arr, sizeof(arr)/sizeof(*arr));
-    cout << "xxx";
+    cout << "\n";
     return 0;
 }
 #endif

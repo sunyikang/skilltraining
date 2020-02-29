@@ -8,9 +8,9 @@
         "args": [
           "-std=c++17",
           "-stdlib=libc++",
-          "sandbox/hello.cpp",
+          "algorithm/arrayaddition.cpp",
           "-o",
-          "sandbox/hello.out",
+          "algorithm/arrayaddition.out",
           "--debug"
         ],
         "group": {

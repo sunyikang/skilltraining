@@ -6,9 +6,9 @@
         "name": "Launch",
         "type": "lldb",
         "request": "launch",
-        "program": "${workspaceFolder}/sandbox/hello.out",
+        "program": "${workspaceFolder}/algorithm/arrayaddition.out",
         "args": [],
-        "cwd": "${workspaceFolder}",
+        "cwd": "${workspaceFolder}"
       }
     ]
 }
