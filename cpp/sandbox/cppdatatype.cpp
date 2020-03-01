@@ -2,8 +2,8 @@
 #include<iostream> 
 using namespace std; 
   
-int main() 
-{ 
+void different_datatype()
+{
     // 1 byte
     cout << "Size of bool : " << sizeof(bool)  
       << " byte" << endl; 
@@ -23,7 +23,7 @@ int main()
        << " bytes" <<endl; 
     cout << "Size of wchar_t : " << sizeof(wchar_t)  
        << " bytes" <<endl; 
-    
+
     // 8 bytes
     cout << "Size of long : " << sizeof(long)  
        << " bytes" << endl; 
@@ -41,6 +41,30 @@ int main()
     // 16 bytes
     cout << "Size of long double : " << sizeof(long double)  
        << " bytes" << endl; 
+}
+
+void uninitialized_datatype() 
+{ 
+    // The following primitive data type variables will not 
+    // be initialized with any default values 
+    char ch; 
+    float f; 
+    int i; 
+    double d; 
+    long l; 
+  
+    cout << ch << endl; 
+    cout << f << endl; 
+    cout << i << endl; 
+    cout << d << endl; 
+    cout << l << endl; 
+} 
+
+int main() 
+{ 
+    different_datatype();
+
+    uninitialized_datatype();
     
     return 0; 
-} 
+}
