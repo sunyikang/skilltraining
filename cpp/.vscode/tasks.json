@@ -11,7 +11,7 @@
           "algorithm/arrayaddition.cpp",
           "-o",
           "algorithm/arrayaddition.out",
-          "--debug"
+          "-g"
         ],
         "group": {
           "kind": "build",
