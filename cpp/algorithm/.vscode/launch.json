@@ -1,29 +1,14 @@
-/* launch.json */
+// Reference to https://github.com/vadimcn/vscode-lldb
 {
-    "version": "2.0.0",
+    "version": "0.2.0",
     "configurations": [
-        {
-            "name": "C++ Launch",
-            "type": "cppdbg",
-            "request": "launch",
-            "program": "${workspaceRoot}/arrayaddition.out",
-            "preLaunchTask": "build",
-            "internalConsoleOptions": "openOnSessionStart",
-            "logging": {
-                "moduleLoad": false,
-                "programOutput": true,
-                "trace": false,
-                "traceResponse": false
-            },
-            "showDisplayString": false,
-            "args": [],
-            "stopAtEntry": true,
-            "cwd": "${workspaceRoot}",
-            "environment": [],
-            "externalConsole": true, // set true to enable keyboard input
-            "osx": {
-                "MIMode": "lldb"
-            }
-        }
+      {
+        "name": "Launch",
+        "type": "lldb",
+        "request": "launch",
+        "program": "${workspaceFolder}/arrayaddition.out",
+        "args": [],
+        "cwd": "${workspaceFolder}"
+      }
     ]
 }
