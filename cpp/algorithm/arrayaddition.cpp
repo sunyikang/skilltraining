@@ -4,13 +4,12 @@
 #include <map>
 #include <cstring>
 #include <cctype>
-#include <ext/hash_set>
+#include <unordered_set>
 using namespace std;
-using namespace __gnu_cxx;
 
-static void AddToHashSet(hash_set<int>* hashset, int value)
+static void AddToHashSet(unordered_set<int>* hashset, int value)
 {
-    hash_set<int>::iterator it;
+    unordered_set<int>::iterator it;
     for(it = hashset->begin(); it != hashset->end(); it++)
     {
         int newvalue = *it + value;
@@ -34,7 +33,7 @@ static string ArrayAddition(int arr[], int length)
     set.erase(*set.rbegin());
 
     // 2. hashset
-    hash_set<int> hashset;
+    unordered_set<int> hashset;
     hashset.insert(0);
 
     // 3. add to hashset
