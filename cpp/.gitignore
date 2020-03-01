@@ -1,6 +1,7 @@
 *.dSYM
 *.out
 *.o
+logs
 
-ipch
-bin
+ipch/
+bin/
