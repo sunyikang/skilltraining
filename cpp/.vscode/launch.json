@@ -6,7 +6,7 @@
         "name": "Launch",
         "type": "lldb",
         "request": "launch",
-        "program": "${workspaceFolder}/algorithm/arrayaddition.out",
+        "program": "${workspaceFolder}/sandbox/cppdatatype.out",
         "args": [],
         "cwd": "${workspaceFolder}"
       }
