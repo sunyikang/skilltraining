@@ -8,9 +8,9 @@
         "args": [
           "-std=c++17",
           "-stdlib=libc++",
-          "hello.cpp",
+          "cppvector.cpp",
           "-o",
-          "hello.out",
+          "cppvector.out",
           "--debug"
         ],
         "group": {
