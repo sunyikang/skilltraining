@@ -60,11 +60,22 @@ void uninitialized_datatype()
     cout << l << endl; 
 } 
 
+void auto_storage_class()
+{
+    auto c = 'char';
+    auto i = 1;
+
+    cout << "\nc value: " << c << "\n";
+    cout << "i value: " << i << "\n";
+}
+
 int main() 
 { 
     different_datatype();
 
     uninitialized_datatype();
+
+    auto_storage_class();
     
     return 0; 
 }
