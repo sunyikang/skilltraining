@@ -8,9 +8,9 @@
         "args": [
           "-std=c++17",
           "-stdlib=libc++",
-          "algorithm/arrayaddition.cpp",
+          "algorithm/text_input.cpp",
           "-o",
-          "algorithm/arrayaddition.out",
+          "algorithm/text_input.out",
           "-g"
         ],
         "group": {

@@ -6,7 +6,7 @@
         "name": "Launch",
         "type": "lldb",
         "request": "launch",
-        "program": "${workspaceFolder}/sandbox/cppdatatype.out",
+        "program": "${workspaceFolder}/algorithm/text_input.out",
         "args": [],
         "cwd": "${workspaceFolder}"
       }
