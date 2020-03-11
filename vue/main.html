@@ -6,13 +6,14 @@
 <body>
     <div id="app">
         <div class="container">
-            <form v-if='!submitted' class="mt-5">
+            <form v-if='!uploaded' class="mt-5">
                 <div class="form-group">
                     <label for="email">Email</label>
                     <input type='email' v-model='email' class='form-control form-control-lg'>
                 </div>
                 <button type='submit' @click.prevent="process" class='bnt btn-primary'>Submit</button>
             </form>
+            <h2 v-if='uploaded' class='mt-5'>Thank you for uploading!</h2>
         </div>
     </div>
 </body>
@@ -25,11 +26,11 @@
         el: '#app',
         data: {
             email: 'yikang@example.com',
-            submitted: false
+            uploaded: false
         },
         methods: {
             process: function() {
-                this.submitted = true;
+                this.uploaded = true;
             }
         }
     });
