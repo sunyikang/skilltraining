@@ -11,7 +11,7 @@
                     <label for="email">Email</label>
                     <input type='email' v-model='email' class='form-control form-control-lg'>
                 </div>
-                <button type='submit' v-on:click.prevent="process" class='bnt btn-primary'>Submit</button>
+                <button type='submit' @click.prevent="process" class='bnt btn-primary'>Submit</button>
             </form>
         </div>
     </div>
