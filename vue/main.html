@@ -13,7 +13,7 @@
                 </div>
                 <button type='submit' @click.prevent="process" class='bnt btn-primary'>Submit</button>
             </form>
-            <h2 v-if='uploaded' class='mt-5'>Thank you for uploading!</h2>
+            <h2 v-else class='mt-5 '>Thank you for uploading!</h2>
         </div>
     </div>
 </body>
@@ -23,9 +23,9 @@
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 <script>
     var vm = new Vue({
-        el: '#app',
+        el: '#app ',
         data: {
-            email: 'yikang@example.com',
+            email: 'yikang@example.com ',
             uploaded: false
         },
         methods: {
