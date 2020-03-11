@@ -6,7 +6,7 @@
 <body>
     <div id="app">
         <div class="container">
-            <form class="mt-5">
+            <form v-if='!submitted' class="mt-5">
                 <div class="form-group">
                     <label for="email">Email</label>
                     <input type='email' v-model='email' class='form-control form-control-lg'>
@@ -24,11 +24,12 @@
     var vm = new Vue({
         el: '#app',
         data: {
-            email: 'yikang@example.com'
+            email: 'yikang@example.com',
+            submitted: false
         },
         methods: {
             process: function() {
-                alert('Submitted ' + this.email);
+                this.submitted = true;
             }
         }
     });
