@@ -5,7 +5,15 @@
 
 <body>
     <div id="app">
-        <h1>{{greeting}}</h1>
+        <div class="container">
+            <form class="mt-5">
+                <div class="form-group">
+                    <lable for="email">Email</lable>
+                    <input type='email' class='form-control form-control-lg'>
+                </div>
+                <button type='submit' class='bnt btn-primary'>Submit</button>
+            </form>
+        </div>
     </div>
 </body>
 
@@ -15,8 +23,6 @@
 <script>
     new Vue({
         el: '#app',
-        data: {
-            greeting: 'Hello from Vue!'
-        }
+        data: {}
     })
 </script>
