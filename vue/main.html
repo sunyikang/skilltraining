@@ -6,7 +6,7 @@
 <body>
     <div id="app">
         <div class="container">
-            <form v-if='!uploaded' class="mt-5">
+            <form v-show='!uploaded' class="mt-5">
                 <div class="form-group">
                     <label for="email">Email</label>
                     <input type='email' v-model='email' class='form-control form-control-lg'>
