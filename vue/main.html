@@ -21,7 +21,9 @@
 </html>
 
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 <script>
+    var uploaded_files_url = 'http://localhost:5000/uploaded_files';
     var vm = new Vue({
         el: '#app ',
         data: {
@@ -34,4 +36,10 @@
             }
         }
     });
+
+    axios.get(uploaded_files_url)
+        .then(function(res) {
+            console.clear();
+            console.log(res);
+        });
 </script>
