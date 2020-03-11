@@ -27,7 +27,8 @@
             email: 'yikang@example.com'
         },
         methods: {
-            process: function() {
+            process: function(event) {
+                event.preventDefault();
                 alert('Submitted ' + this.email);
             }
         }
