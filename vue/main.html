@@ -75,7 +75,7 @@
                 let formData = new FormData();
                 formData.append('file', this.upload_candidate_file);
 
-                axios.post('http://localhost:5000/uploadvideo',
+                axios.post('http://localhost:5000/upload_video',
                         formData, {
                             headers: {
                                 'Content-Type': 'multipart/form-data'
@@ -102,7 +102,7 @@
             downloadProcessedFile: function(index) {
                 if (this.filesStatus[index].downloadable) {
                     var processedFile = this.filesStatus[index].processed_file;
-                    var url = 'http://localhost:5000/downloadvideo/' + processedFile;
+                    var url = 'http://localhost:5000/download_video/' + processedFile;
                     window.open(url)
                 }
             }
