@@ -34,16 +34,13 @@
             </form>
         </div>
         <div class="container">
-            <form v-if='!uploaded' class="mt-5">
-                <!-- <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type='email' v-model='email' class='form-control form-control-lg'>
-                </div> -->
-                <input type="file" id="upload_file_name">
-                <p></p>
-                <button type='button' @click.prevent="uploadNewVideos" class='bnt btn-primary'>Upload New Videos</button>
+            <label>
+                <input type="file" id="file" ref="file" @change="handleVideoSelection()"/>
+            </label>
+            <form>
+                <button type='button' @click.prevent="uploadVideo" class='bnt btn-primary'>Upload</button>
+                <h5 class="mt-2">{{status_message}}</h5>
             </form>
-            <h2 v-else class='mt-5'>Thank you for uploading!</h2>
         </div>
     </div>
 </body>
@@ -57,7 +54,8 @@
         el: '#app',
         data: {
             email: 'yikang@example.com ',
-            uploaded: false,
+            status_message: '',
+            upload_candidate_file: '',
             filesStatus: []
         },
         computed: {
@@ -66,15 +64,34 @@
             }
         },
         created: function() {
-            this.getProcessStatus();
+            this.getFilesStatus();
         },
         methods: {
-            uploadNewVideos: function() {
-                this.uploaded = true;
+            handleVideoSelection: function() {
+                this.status_message = '';
+                this.upload_candidate_file = this.$refs.file.files[0];
             },
-            getProcessStatus: function() {
-                var url = 'http://localhost:5000/server_files_status';
-                axios.get(url)
+            uploadVideo: function() {
+                let formData = new FormData();
+                formData.append('file', this.upload_candidate_file);
+
+                axios.post('http://localhost:5000/uploadvideo',
+                        formData, {
+                            headers: {
+                                'Content-Type': 'multipart/form-data'
+                            }
+                        }
+                    ).then(function() {
+                        vm.status_message = 'Video file has been uploaded successfully!';
+                        console.log(vm.status_message);
+                    })
+                    .catch(function() {
+                        vm.status_message = 'Encounter error when upload video file!';
+                        console.log(vm.status_message);
+                    });
+            },
+            getFilesStatus: function() {
+                axios.get('http://localhost:5000/server_files_status')
                     .then(function(res) {
                         vm.filesStatus = res.data;
                         for (index in vm.filesStatus) {
