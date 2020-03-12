@@ -10,12 +10,14 @@
                 <table class='table'>
                     <h2>Videos</h2>
                     <thead class='thead-light'>
+                        <th>#</th>
                         <th>Uploaded Videos</th>
                         <th>Processed Videos</th>
                         <th>Download</th>
                     </thead>
                     <tbody>
-                        <tr v-for='a in processStatus'>
+                        <tr v-for='(a, index) in processStatus'>
+                            <td>{{index + 1}}</td>
                             <td>{{a.target_file}}</td>
                             <td>{{a.processed_file}}</td>
                             <td>download</td>
