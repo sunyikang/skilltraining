@@ -36,6 +36,8 @@
                     <label for="email">Email</label>
                     <input type='email' v-model='email' class='form-control form-control-lg'>
                 </div> -->
+                <input type="file" id="upload_file_name">
+                <p></p>
                 <button type='button' @click.prevent="uploadNewVideos" class='bnt btn-primary'>Upload New Videos</button>
             </form>
             <h2 v-else class='mt-5'>Thank you for uploading!</h2>
@@ -49,7 +51,7 @@
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 <script>
     var vm = new Vue({
-        el: '#app ',
+        el: '#app',
         data: {
             email: 'yikang@example.com ',
             uploaded: false,
@@ -61,7 +63,6 @@
         methods: {
             uploadNewVideos: function() {
                 this.uploaded = true;
-                axios.post()
             },
             getProcessStatus: function() {
                 var url = 'http://localhost:5000/server_filepairs';
