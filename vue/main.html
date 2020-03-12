@@ -21,9 +21,9 @@
                             <td>{{status.target_file}}</td>
                             <td>{{status.processed_file}}</td>
                             <td>
-                                <form v-if='status.downloadable'>
+                                <div v-if='status.downloadable'>
                                     <button @click.prevent='downloadProcessedFile(index)' class='btn btn-warning'>Download</button>
-                                </form>
+                                </div>
                             </td>
                         </tr>
                     </tbody>
@@ -61,6 +61,7 @@
         methods: {
             uploadNewVideos: function() {
                 this.uploaded = true;
+                axios.post()
             },
             getProcessStatus: function() {
                 var url = 'http://localhost:5000/server_filepairs';
@@ -68,19 +69,15 @@
                     .then(function(res) {
                         vm.processStatus = res.data;
                         for (index in vm.processStatus) {
-                            processedFile = vm.processStatus[index].processed_file
-                            vm.processStatus[index].downloadable = processedFile != null
+                            vm.processStatus[index].downloadable = vm.processStatus[index].processed_file != null
                         }
                     });
             },
             downloadProcessedFile: function(index) {
-                var processedFile = vm.processStatus[index].processed_file;
-                if (processedFile != null) {
+                if (vm.processStatus[index].downloadable) {
+                    var processedFile = vm.processStatus[index].processed_file;
                     var url = 'http://localhost:5000/downloadvideo/' + processedFile;
-                    axios.get(url)
-                        .then(function(res) {
-                            console.log('download from url: ' + url);
-                        });
+                    window.open(url)
                 }
             }
         }
