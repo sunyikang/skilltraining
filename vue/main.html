@@ -7,8 +7,11 @@
     <div id="app">
         <div class='container'>
             <form class="mt-5">
+                <h2>Pose Estimation</h2>
+                <div class='m-3' v-cloak v-if='numUploadedFiles'>
+                    <p>(Showing {{numUploadedFiles}} items)</p>
+                </div>
                 <table class='table'>
-                    <h2>Videos</h2>
                     <thead class='thead-light'>
                         <th>#</th>
                         <th>Uploaded Videos</th>
@@ -16,7 +19,7 @@
                         <th>Download</th>
                     </thead>
                     <tbody>
-                        <tr v-for='(status, index) in processStatus'>
+                        <tr v-for='(status, index) in filesStatus'>
                             <td>{{index + 1}}</td>
                             <td>{{status.target_file}}</td>
                             <td>{{status.processed_file}}</td>
@@ -55,7 +58,12 @@
         data: {
             email: 'yikang@example.com ',
             uploaded: false,
-            processStatus: []
+            filesStatus: []
+        },
+        computed: {
+            numUploadedFiles: function() {
+                return this.filesStatus.length;
+            }
         },
         created: function() {
             this.getProcessStatus();
@@ -65,18 +73,18 @@
                 this.uploaded = true;
             },
             getProcessStatus: function() {
-                var url = 'http://localhost:5000/server_filepairs';
+                var url = 'http://localhost:5000/server_files_status';
                 axios.get(url)
                     .then(function(res) {
-                        vm.processStatus = res.data;
-                        for (index in vm.processStatus) {
-                            vm.processStatus[index].downloadable = vm.processStatus[index].processed_file != null
+                        vm.filesStatus = res.data;
+                        for (index in vm.filesStatus) {
+                            vm.filesStatus[index].downloadable = vm.filesStatus[index].processed_file != null
                         }
                     });
             },
             downloadProcessedFile: function(index) {
-                if (vm.processStatus[index].downloadable) {
-                    var processedFile = vm.processStatus[index].processed_file;
+                if (this.filesStatus[index].downloadable) {
+                    var processedFile = this.filesStatus[index].processed_file;
                     var url = 'http://localhost:5000/downloadvideo/' + processedFile;
                     window.open(url)
                 }
