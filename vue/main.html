@@ -11,12 +11,14 @@
                     <h2>Videos</h2>
                     <thead class='thead-light'>
                         <th>Uploaded Videos</th>
-                        <th>Downloadable Videos</th>
+                        <th>Processed Videos</th>
+                        <th>Download</th>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td></td>
-                            <td></td>
+                        <tr v-for='a in processStatus'>
+                            <td>{{a.target_file}}</td>
+                            <td>{{a.processed_file}}</td>
+                            <td>download</td>
                         </tr>
                     </tbody>
                 </table>
@@ -45,22 +47,29 @@
         data: {
             email: 'yikang@example.com ',
             uploaded: false,
-            uploadedFiles: []
+            processStatus: []
         },
         created: function() {
-            this.getUploadedFiles();
+            this.getProcessStatus();
         },
         methods: {
             uploadNewVideos: function() {
                 this.uploaded = true;
             },
-            getUploadedFiles: function() {
-                var url = 'http://localhost:5000/uploaded_files';
+            getProcessStatus: function() {
+                var url = 'http://localhost:5000/server_filepairs';
                 axios.get(url)
                     .then(function(res) {
                         console.clear();
                         console.log(res);
-                        vm.uploadedFiles = res.data.filenames;
+                        vm.processStatus = res.data;
+                        for (status in vm.processStatus) {
+                            if (status.processed_file = None) {
+                                status.processed_file = 'in processing ...'
+                            }
+                        }
+
+                        console.log(vm.ProcessStatus);
                     });
             }
         }
