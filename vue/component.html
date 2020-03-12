@@ -4,18 +4,32 @@
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
 <div id='app'>
+    <another-component></another-component>
     <my-component v-for="i in 1000"></my-component>
+
 </div>
 
 </html>
 
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 <script>
+    var anotherComponent = {
+        template: '<h1>{{msg}}</h1>',
+        data: function() {
+            return {
+                msg: 'Hello from another component!'
+            }
+        }
+    };
+
     Vue.component('my-component', {
         template: '<strong>  Google before ask!   </strong>'
     });
 
     var vm = new Vue({
-        el: '#app'
+        el: '#app',
+        components: {
+            'another-component': anotherComponent
+        }
     });
 </script>
