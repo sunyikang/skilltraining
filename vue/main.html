@@ -5,13 +5,30 @@
 
 <body>
     <div id="app">
+        <div class='container'>
+            <form class="mt-5">
+                <table class='table'>
+                    <h2>Videos</h2>
+                    <thead class='thead-light'>
+                        <th>Uploaded Videos</th>
+                        <th>Downloadable Videos</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </form>
+        </div>
         <div class="container">
             <form v-if='!uploaded' class="mt-5">
-                <div class="form-group">
+                <!-- <div class="form-group">
                     <label for="email">Email</label>
                     <input type='email' v-model='email' class='form-control form-control-lg'>
-                </div>
-                <button type='submit' @click.prevent="process" class='bnt btn-primary'>Submit</button>
+                </div> -->
+                <button type='button' @click.prevent="uploadNewVideos" class='bnt btn-primary'>Upload New Videos</button>
             </form>
             <h2 v-else class='mt-5'>Thank you for uploading!</h2>
         </div>
@@ -34,7 +51,7 @@
             this.getUploadedFiles();
         },
         methods: {
-            process: function() {
+            uploadNewVideos: function() {
                 this.uploaded = true;
             },
             getUploadedFiles: function() {
