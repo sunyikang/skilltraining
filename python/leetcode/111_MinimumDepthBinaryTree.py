@@ -22,7 +22,7 @@ Requirement:
 """
 
 """
-Solution:
+Solution:  O(N)
 
     find leaf in a layer of node, if cannot find, go to next layer
 """

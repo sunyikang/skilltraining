@@ -27,7 +27,7 @@ Requirement:
 """
 
 """
-Solution:
+Solution: O(N)
 
     Each time step 1 or 2, the left stairs' possible cases is fixed. 
     If maintain a dictionary to check the cases, then do not need to run into details anymore.

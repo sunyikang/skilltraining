@@ -25,7 +25,7 @@ Requirement:
 """
 
 """
-Solution:
+Solution: O(N)
     
     Regenerate the string and replace the . by [.]
 */
