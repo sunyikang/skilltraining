@@ -30,14 +30,14 @@ Solution:  O(J + S)
 
 class Solution:
     def numJewelsInStones(self, J: str, S: str) -> int:
-        map = {}
+        jset = set()
 
         for j in J:
-            map[j] = 0
+            jset.add(j)
 
         count = 0
         for s in S:
-            if s in map:
+            if s in jset:
                 count += 1
 
         return count
