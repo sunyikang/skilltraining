@@ -2,6 +2,7 @@
     "python.autoComplete.extraPaths": [
         "exam",
         "features",
+        "leetcode",
         "lele",
         "speed"
     ],
