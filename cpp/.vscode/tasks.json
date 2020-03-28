@@ -8,9 +8,9 @@
         "args": [
           "-std=c++17",
           "-stdlib=libc++",
-          "algorithm/text_input.cpp",
+          "leetcode/70_climbingstairs.cpp",
           "-o",
-          "algorithm/text_input.out",
+          "leetcode/70_climbingstairs.out",
           "-g"
         ],
         "group": {
