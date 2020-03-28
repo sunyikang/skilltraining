@@ -8,9 +8,9 @@
         "args": [
           "-std=c++17",
           "-stdlib=libc++",
-          "leetcode/111_MinimumDepthBinaryTree.cpp",
+          "leetcode/1108_DefangingAnIPAddress.cpp",
           "-o",
-          "leetcode/111_MinimumDepthBinaryTree.out",
+          "leetcode/1108_DefangingAnIPAddress.out",
           "-g"
         ],
         "group": {
