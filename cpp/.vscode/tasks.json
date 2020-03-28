@@ -8,9 +8,9 @@
         "args": [
           "-std=c++17",
           "-stdlib=libc++",
-          "leetcode/70_climbingstairs.cpp",
+          "leetcode/111_MinimumDepthBinaryTree.cpp",
           "-o",
-          "leetcode/70_climbingstairs.out",
+          "leetcode/111_MinimumDepthBinaryTree.out",
           "-g"
         ],
         "group": {
