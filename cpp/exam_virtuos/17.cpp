@@ -20,7 +20,7 @@
 using namespace std;
 
 template<typename T>
-vector<T>&& makeVector(initializer_list<T> init_list)
+vector<T> makeVector(initializer_list<T> init_list)
 {
     return vector<T>(init_list);
 }
