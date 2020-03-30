@@ -8,9 +8,9 @@
         "args": [
           "-std=c++17",
           "-stdlib=libc++",
-          "leetcode/1108_DefangingAnIPAddress.cpp",
+          "exam_virtuos/17.cpp",
           "-o",
-          "leetcode/1108_DefangingAnIPAddress.out",
+          "exam_virtuos/17.out",
           "-g"
         ],
         "group": {
