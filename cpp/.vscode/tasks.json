@@ -8,9 +8,9 @@
         "args": [
           "-std=c++17",
           "-stdlib=libc++",
-          "exam_virtuos/17.cpp",
+          "exam_virtuos/13.cpp",
           "-o",
-          "exam_virtuos/17.out",
+          "exam_virtuos/13.out",
           "-g"
         ],
         "group": {
