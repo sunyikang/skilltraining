@@ -7,7 +7,7 @@
         "name": "Launch",
         "type": "lldb",
         "request": "launch",
-        "program": "${workspaceFolder}/leetcode/111_MinimumDepthBinaryTree.out",
+        "program": "${workspaceFolder}/exam_virtuos/15.out",
         "args": [],
         "cwd": "${workspaceFolder}"
       }
