@@ -81,3 +81,26 @@ pixel position.
 1) change the model from local matrix to global matrix by transform matrix
 2) change to viewport
 3) cut the part that out of viewport
+
+## 2.4
+
+What is BRDF? Highlight the 4 major parameters in BRDF and what they represent.
+
+Answer:
+
+http://graphics.stanford.edu/~smr/cs348c/surveypaper.html
+1) bidirectional reflectance distribution function
+2) angular: 
+	angle between incoming ray and normal, 
+	angle between outgoing ray and normal, 
+	angle between incoming ray on surface and normal, 
+	angle between outgoing ray on surface and normal
+
+
+What is meant by Physically Based Rendering and what does it allow us to do?
+
+Answer:
+
+Physically-Based Rendering (PBR) is an approach for materials and rendering that creates more accurate and predictable results than previous game rendering techniques.
+
+Allow us to do dynamic lighting conditions (e.g. time-of-day).
