@@ -7,7 +7,7 @@
         "name": "Launch",
         "type": "lldb",
         "request": "launch",
-        "program": "${workspaceFolder}/exam_virtuos/15.out",
+        "program": "${workspaceFolder}/exam_virtuos/16.out",
         "args": [],
         "cwd": "${workspaceFolder}"
       }
