@@ -53,8 +53,6 @@ def inception_block_1a(X):
     X_1x1 = tf.keras.layers.Activation('relu')(X_1x1)
 
     # CONCAT
-    print("[X_3x3, X_5x5, X_pool, X_1x1] shape: ",
-          X_3x3.shape, X_5x5.shape, X_pool.shape, X_1x1.shape)
     inception = tf.keras.layers.concatenate([X_3x3, X_5x5, X_pool, X_1x1], axis=1)
 
     return inception
@@ -293,7 +291,6 @@ def faceRecoModel(input_shape):
     X = tf.keras.layers.MaxPooling2D(pool_size=3, strides=2)(X)
 
     # Inception 1: a/b/c
-    print("X shape: ", X.shape)
     X = inception_block_1a(X)
     X = inception_block_1b(X)
     X = inception_block_1c(X)
