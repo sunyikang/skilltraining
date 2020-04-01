@@ -4,7 +4,8 @@
         "features",
         "leetcode",
         "lele",
-        "speed"
+        "speed",
+        "face_recognition"
     ],
     "python.autoComplete.addBrackets": true,
     "git.ignoreLimitWarning": true,
