@@ -1,3 +1,13 @@
+"""
+Idea:   keep going to divide items to left and right until atom, then merge and 
+        sort them up back to a whole items
+Special: divide first then conque
+Complexity:  O(nlog(n))
+
+Ref Course: https://www.linkedin.com/learning/programming-foundations-algorithms/the-merge-sort?autoplay=true
+"""
+
+
 def mergesort(items):
     if len(items) > 1:
         # devide
