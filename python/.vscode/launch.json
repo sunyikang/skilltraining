@@ -9,7 +9,7 @@
             "name": "Python: Module",
             "type": "python",
             "request": "launch",
-            "program": "exam_virtuos/syracuse_2.py",
+            "program": "interview_facebook/tech_interview_01.py",
             "args": [
                 "-v"
             ]
